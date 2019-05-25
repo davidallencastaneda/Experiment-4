@@ -1,0 +1,47 @@
+#include <iostream>
+
+using namespace std;
+void selection(int a[], int b)
+{
+    for (int c=0; c<b; c++)
+    {
+        for (int d=c+1; d<b; d++)
+        {
+            if (a[c] > a[d])
+            {
+                int e = a[c];
+                a[c] = a[d];
+                a[d] = e;}}}
+    
+    cout<<endl<<"After using selection sort..."<<endl<<endl;
+    cout<<"Sorted data: ";
+    for (int c=0; c<b; c++)
+    {
+        cout<<a[c]<<" ";}
+    cout<<endl<<endl;}
+
+int main()
+{
+    int c;
+    int b;
+    int a[32];
+    
+    cout<<"The program will sort the data using Selection Sorting."<<endl<<endl;
+    cout<<"Enter array size: ";
+    cin>>b;
+    cout<<endl;
+    cout<<"Enter the "<<b<<" elements: "<<endl;
+    for (c=0; c<b; c++)
+    {
+        cin>>a[c];}
+    
+    cout<<endl<<"The data you provided: ";
+    
+    for (c=0; c<b; c++)
+    {
+        cout << a[c] << " ";}
+    
+    cout<<endl;
+    selection (a,b);
+    return 0;
+}
