@@ -1,0 +1,70 @@
+#include <iostream>
+
+using namespace std;
+void calcu()
+{
+    char choice;
+    do
+    {
+        int process;
+        int x;
+        int y;
+        int z;
+        
+        cout<<"Selection:"<<endl;
+        cout<<"Enter 1 for Addition"<<endl;
+        cout<<"Enter 2 for Subtraction"<<endl;
+        cout<<"Enter 3 for Multiplication"<<endl;
+        cout<<"Enter 4 for Divition"<<endl;
+        cout<<"Enter 5 for Modulus"<<endl;
+        cout<<endl;
+        
+        cout<<"Enter your choice: ";
+        cin>>process;
+        cout<<"Enter your two numbers: ";
+        cin>>x;
+        cin>>y;
+        
+        switch (process)
+        {
+            case 1:
+                y = x + z;
+                cout<<"Result: "<<y;
+                break;
+                
+            case 2:
+                y = x - z;
+                cout<<"Result: "<<y;
+                break;
+                
+            case 3:
+                y = x * z;
+                cout<<"Result: "<<y;
+                break;
+                
+            case 4:
+                y = x / z;
+                cout<<"Result: "<<y;
+                break;
+            case 5:
+                y = x % z;
+                cout<<"Result: "<<y;
+                break;
+                
+            default:	
+                cout<<"Invalid input, please choose a number from 1-5";
+                break;
+        }
+        cout<<endl;
+        cout<<"Continue? (y): ";
+        cin>>choice;
+        cout<<endl;
+        
+    }
+    while (choice == 'y' || choice == 'Y');
+}
+int main()
+{
+    calcu();
+    return 0;
+}
